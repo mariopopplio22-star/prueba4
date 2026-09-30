@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#000000">
+  <title>HealthyFit | Servicios</title>
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Cada archivo va UNA sola vez. No uses la etiqueta base con target="_blank": abre todos los enlaces en pestañas nuevas -->
+  <link rel="stylesheet" href="css/estilo.css">
+  <link rel="stylesheet" href="css/navbar.css">
+</head>
+<!-- id y data-pagina identifican esta página; navbar.js marca con ellos el botón activo -->
+<body id="pagina-servicios" data-pagina="servicios">
+
+  <!-- ============ BARRA DE NAVEGACIÓN ============ -->
+  <header class="hf-nav" id="hfNav">
+    <a href="index.html" class="hf-nav__brand" id="nav-logo">
+      <img src="img/Logo.jpg" alt="Logo HealthyFit" class="hf-nav__logo" id="logotipo">
+      <span class="hf-nav__name"><span>Healthy</span><span>Fit</span></span>
+    </a>
+
+    <!-- Botón hamburguesa: solo se ve en celular -->
+    <button class="hf-nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navPanel">
+      <span></span><span></span><span></span>
+    </button>
+
+    <!-- Fondo oscuro: solo celular -->
+    <div class="hf-nav__backdrop" id="navBackdrop"></div>
+
+    <!-- Panel: en PC/laptop son las opciones en fila; en celular se desliza desde la derecha -->
+    <nav class="hf-nav__panel" id="navPanel" aria-label="Principal">
+      <button class="hf-nav__close" id="navClose" aria-label="Cerrar menú">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg>
+      </button>
+
+      <ul class="hf-nav__links">
+        <li><a href="index.html" id="nav-inicio" data-pagina="inicio">Inicio</a></li>
+        <li><a href="nosotros.html" id="nav-nosotros" data-pagina="nosotros">Sobre de Nosotros</a></li>
+        <li><a href="servicios.html" id="nav-servicios" data-pagina="servicios" class="active" aria-current="page">Servicios</a></li>
+        <li><a href="productos.html" id="nav-productos" data-pagina="productos">Productos</a></li>
+        <li><a href="contacto.html" id="nav-contacto" data-pagina="contacto">Contacto</a></li>
+        <li><a href="ayuda.html" id="nav-ayuda" data-pagina="ayuda">Ayuda</a></li>
+      </ul>
+
+      <div class="hf-nav__tools">
+        <form class="hf-search" role="search" action="productos.html" method="get">
+          <input type="search" name="q" id="navSearch" placeholder="Buscador" aria-label="Buscar productos">
+          <button type="submit" aria-label="Buscar"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><circle cx="10" cy="10" r="6"/><path d="M15 15l6 6"/></svg></button>
+        </form>
+        <div class="hf-icons">
+          <a href="index.html#login" class="hf-icon" id="nav-cuenta" aria-label="Mi cuenta (Login)"><svg viewBox="0 0 32 32" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="16" cy="11" r="6"/><path d="M4 30c0-7 5-11 12-11s12 4 12 11z"/></svg></a>
+          <a href="productos.html" class="hf-icon" id="nav-carrito" aria-label="Carrito de compras"><svg viewBox="0 0 36 32" width="34" height="30" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M1 2h5l4 18h19l4-13H8"/><path d="M14 8l2 12M20 8v12M26 8l-2 12M8 14h25"/><circle cx="13" cy="27" r="2.2" fill="currentColor"/><circle cx="27" cy="27" r="2.2" fill="currentColor"/></svg><span class="hf-badge" id="cartCount" hidden>0</span></a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="servicios-inicio">
+      <div class="hero__text">
+        <h1>Servicios</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <div class="hero__buttons">
+          <a href="productos.html" class="btn btn--primary">Ver productos</a>
+          <a href="contacto.html" class="btn btn--outline">Contáctanos</a>
+        </div>
+      </div>
+      <div class="slot hero__image"><span>...</span><!-- <img src="img/tu-foto.jpg" alt=""> --></div>
+    </section>
+
+    <section class="wrap" id="categorias">
+      <h2 class="title">Categorías de servicios <small>(Acceso Rápido)</small></h2>
+      <div class="panel"><div class="cards">
+        <article class="card" id="servicio-1"><span class="tag">Servicio 1</span><div class="slot"><span>...</span><!-- <img src="img/tu-foto.jpg" alt=""> --></div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p></article>
+        <article class="card" id="servicio-2"><span class="tag">Servicio 2</span><div class="slot"><span>...</span><!-- <img src="img/tu-foto.jpg" alt=""> --></div><p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p></article>
+        <article class="card" id="servicio-3"><span class="tag">Servicio 3</span><div class="slot"><span>...</span><!-- <img src="img/tu-foto.jpg" alt=""> --></div><p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.</p></article>
+      </div></div>
+      <div class="panel">
+        <article class="card card--wide" id="servicio-4"><span class="tag">Servicio 4</span><div class="slot"><span>... Video</span><!-- <img src="img/tu-foto.jpg" alt=""> --></div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ PIE DE PÁGINA ============ -->
+  <footer class="footer" id="contacto-footer">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <!-- LOGO: pon tu <img> dentro del panel -->
+        <div class="slot footer__logo"><span>...</span><!-- IMG --></div>
+        <p class="footer__copy">Copyright 2026<br>Healthy Fit</p>
+        <div class="footer__phones"><h4>Números de contactos</h4><p>+51 999 999 999</p><p>+51 (01) 555 5555</p></div>
+        <div class="footer__social">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8V6.5c0-.7.3-1 1-1h2V2h-3c-3 0-4.5 1.8-4.5 4.4V8H7v3.5h2.5V22H14V11.5h2.8L17.3 8z"/></svg></a>
+          <a href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.200zm4.5-6.100c-.2-.1-1.500-.7-1.700-.8s-.4-.1-.6.100-.6.8-.8 1-.3.2-.5.1a6.700 6.700 0 0 1-3.300-2.900c-.3-.4.300-.4.800-1.400.1-.2 0-.3 0-.5l-.8-1.800c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.200c0 1.300.9 2.500 1 2.700s1.800 2.800 4.400 3.900c1.600.7 2.300.7 3.100.6.500-.1 1.500-.6 1.700-1.200s.2-1.100.2-1.200-.2-.2-.4-.3z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.500" cy="6.500" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="mailto:info@healthyfit.com" aria-label="Correo electrónico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h3><a href="productos.html">Productos</a></h3>
+        <div class="footer__group"><p>Suplementos deportivos y proteínas de alta calidad para tu rutina.</p><p>Proteína whey, creatina y aminoácidos.</p></div>
+        <div class="footer__group"><p>Ropa deportiva cómoda y resistente.</p><p>Polos, leggings y accesorios.</p></div>
+        <div class="footer__group"><p>Equipos para entrenar en casa.</p><p>Mancuernas, bandas y colchonetas.</p></div>
+      </div>
+      <div class="footer__col">
+        <h3><a href="servicios.html">Servicios</a></h3>
+        <div class="footer__group"><p>Planes de entrenamiento personalizados.</p><p>Rutinas según tus objetivos.</p></div>
+        <div class="footer__group"><p>Asesoría nutricional con especialistas.</p><p>Planes de alimentación saludable.</p></div>
+        <div class="footer__group"><p>Clases grupales y seguimiento online.</p><p>Yoga, funcional y cardio.</p></div>
+      </div>
+      <div class="footer__subscribe">
+        <h3 class="footer__pill">Suscribete</h3>
+        <p>Recibe ofertas, consejos de entrenamiento y novedades directamente en tu correo.</p>
+        <form id="subscribeForm" novalidate>
+          <input type="email" id="subscribeEmail" placeholder="@gmail" aria-label="Correo electrónico" required>
+          <button type="submit" class="btn btn--primary btn--block">Suscribirme</button>
+          <span class="form-msg" id="formMsg" role="status"></span>
+        </form>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p>Términos y condiciones · Política de privacidad</p>
+    </div>
+  </footer>
+
+  <!-- ============ AYUDAS DE UBICACIÓN ============ -->
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+  <div class="here" id="here" aria-live="polite">Estás en: <strong id="hereName">Servicios</strong></div>
+  <button class="to-top" id="toTop" aria-label="Volver arriba"><svg viewBox="0 0 24 24"><path d="M12 4l9 15H3z"/></svg></button>
+
+  <script src="JeanScrip/navbar.js"></script>
+  <script src="JeanScrip/funciones.js"></script>
+</body>
+</html>
